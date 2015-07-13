@@ -1,0 +1,365 @@
+html {overflow-x: hidden; /* Prevent scroll on narrow devices */}
+body {
+  background: url('../img/bg.jpg');
+  color: #f1f3fd;
+  font-family: "Ubuntu";
+  background-color: #202020;
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+.top-nav {
+  margin-bottom: 0;
+  background: rgba(0,0,0,.7)
+}
+.top-nav .navbar-header {
+  float: left;
+}
+.navbarbrand-pyb {
+	height: auto;
+	padding: 10px 0;
+}
+.navbarbrand-pyb img {
+	height: 40px;
+	width: auto;
+}
+.btn-pybtop {
+  margin: 15px;
+}
+.subtop-nav {
+  z-index: 1000;
+  background: transparent;
+  border: 0;
+  margin-bottom: 0;
+}
+.subtop-nav .navbar-toggle{
+  float: left !important;
+}
+.navbar-toggle {
+  border: 0;
+  padding: 6px 10px;
+  margin: 0;
+  border-radius: 0;
+}
+.navbar-toggle i {
+  font-size: 28px;
+  padding: 5px;
+}
+.subtop-nav .navbar-form {
+  padding: 0;
+  margin-right: 0;
+  border: 0;
+  box-shadow: none;
+  -webkit-box-shadow:none;
+}
+.subtop-nav .navbar-nav>li>a {
+  font-weight: bold;
+  text-transform: uppercase;
+    text-shadow: 1px 1px 0 #fff;
+}
+.row-offcanvas {
+  margin-right: 0;
+  margin-left: 0;
+}
+/* Carousel base class */
+.carousel {
+ top: -121px;
+}
+.load {
+  z-index: 2;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -15px 0 0 -15px;
+  text-align: center;
+}
+.raster {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../img/raster.png');
+}
+.item-portada {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-position: top center;
+}
+.carousel-caption {
+  z-index: 10;
+  left: 5%;
+  right: 5%;
+  bottom: inherit;
+  top: 100px;
+  padding-top: 0;
+}
+.carousel .item {
+  height: 768px;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.carousel-control {
+  z-index: 2;
+}
+.carousel-indicators {
+  top: 300px;
+  bottom: inherit;
+}
+.carousel-control .icon-prev, .carousel-control .icon-next, .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+  top: 30%;
+}
+.carousel-imagenes {
+  top: 0;
+  margin-bottom: 20px;
+}
+.carousel-imagenes .carousel-caption {
+  z-index: 20;
+  right: 0;
+  left: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  bottom: 0;
+  text-shadow:none;
+  text-align: left;
+  top: 265px;
+}
+.carousel-imagenes .carousel-caption .btn-group.dropup {
+  left: 15%;
+  right: 15%;
+}
+.carousel-imagenes .item {
+  height: 300px !important;
+}
+.carousel-imagenes .item img {
+  position: relative;
+  height: 300px !important;
+  width: auto;
+}
+.carousel-imagenes .carousel-indicators {
+  margin-bottom: 20px;
+  top: none;
+  bottom: 20px;
+}
+.carousel-imagenes .carousel-control {
+  background: transparent;
+  margin-bottom: 35px;
+}
+.contenido {
+  z-index: 15;
+}
+.contenido.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+.footer.row{
+	margin-right: 0;
+	margin-left: 0;
+}
+.nav-footer {
+	margin-bottom: 1px;
+}
+.nav-footer .navbarbrand-pyb>img {
+  height: 30px;
+}
+.nav-footer .nav-justified>li>a {
+	padding: 15px 10px;
+}
+.nav-footer .navbar-toggle {
+  border-left: 1px solid #080808;
+}
+.logofooter-pyb {
+	position: relative;
+  	float: left;
+	width: 40px;
+	height: auto;
+}
+.creditos>p {
+  margin: 0;
+  text-indent: 5px;
+}
+.creditos>ul.breadcrumb {
+  float: left;
+  padding: 0;
+  margin: 0;
+  margin-left: 10px;
+  background: transparent;
+}
+.creditos>ul.breadcrumb>li>button {
+	padding: 2px 4px;
+}
+.sociallinks>li {
+display: table-cell;
+width: 1%;
+}
+.sociallinks li>a{
+  font-size: 34px;
+  color: #999;
+  padding: 5px 0;
+}
+.sociallinks li:hover a{
+  background-color: #f1f3fd;
+  color: #252525;
+}
+.backtotop {
+  border-top: 6px solid #222;
+  height: 40px;
+}
+#back-to-top {
+background: #222;
+color: #999;
+position: relative;
+text-align: center;
+width: 60px;
+height: 30px;
+display: block;
+margin: 0 auto;
+margin: 0 auto -30px;
+}
+#back-to-top:hover {
+  color: #ecf0fc;
+}
+#back-to-top:before {
+top: 0;
+left: -30px;
+border: solid;
+border-color: #222 transparent;
+border-width: 30px 0 0 30px;
+content: "";
+display: block;
+position: absolute;
+}
+#back-to-top:after {
+top: 0;
+right: -30px;
+border: solid;
+border-color: #222 transparent;
+border-width: 30px 30px 0 0;
+content: "";
+display: block;
+position: absolute;
+}
+#back-to-top i {
+  font-size: 38px;
+position: relative;
+top: -7px;
+}
+#back-top {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index:499;
+  /*IE6 hack */
+     _position: absolute;
+     _top:expression(documentElement.scrollTop+body.scrollTop);
+     _margin-top: 500px;
+
+}
+#back-top a {
+  width: 50px;
+  display: block;
+  text-align: center;
+  font: 11px/100% Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-bottom: none;
+  color: #bbb;
+  /* background color transition */
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  transition: 1s;
+  
+}
+#back-top a:hover {
+  color: #000;
+}
+/* arrow icon (span tag) */
+#back-top span#button {
+  text-indent: 900px;
+  width: 50px;
+  height: 50px;
+  display: block;
+  margin-bottom: 7px;
+  background: url("../img/top.png") no-repeat center center;
+  /* rounded corners */
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  /* background color transition */
+}
+#back-top span#link:hover {
+background: rgb(241, 127, 96);
+color: rgb(255, 255, 255);
+}
+#back-top span#link {
+display: inline-block;
+border: 1px solid rgb(219, 215, 208);
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+border-radius: 5px;
+font-weight: bolder;
+font-size: 14px;
+line-height: 17px;
+text-transform: uppercase;
+text-decoration: none;
+color: rgb(192, 186, 175);
+background: rgb(255, 255, 255);
+padding: 5px;
+}
+/*Responsive de Bootstrap 3.0*/
+@media (min-width: 480px) {
+.navbarbrand-pyb {
+  padding: 10px;
+}
+.navbarbrand-pyb img {
+  height: 50px;
+}
+.creditos>ul.breadcrumb>li>button {
+  padding: 2px 12px;
+}
+}
+
+@media (max-width: 767px) {
+.row-offcanvas {
+  position: relative;
+  -webkit-transition: all .25s ease-out;
+  -o-transition: all .25s ease-out;
+  transition: all .25s ease-out;
+}
+.row-offcanvas-right {
+  right: 0;
+}
+ .row-offcanvas-left {
+  left: 0;
+}
+.row-offcanvas-right .sidebar-offcanvas {
+  right: -75%; /* 6 columns */
+}
+.row-offcanvas-left .sidebar-offcanvas {
+  left: -75%; /* 6 columns */
+}
+.row-offcanvas-right.active {
+  right: 75%; /* 6 columns */
+}
+.row-offcanvas-left.active {
+  left: 75%; /* 6 columns */
+}
+.sidebar-offcanvas {
+  position: absolute;
+  top: 0;
+  width: 75%; /* 6 columns */
+}
+.sidebar-offcanvas>.nav.navbar-nav{
+  margin: 0;
+}
+.xs-nopadding {
+  padding: 0;
+}
+}
