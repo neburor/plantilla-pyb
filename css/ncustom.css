@@ -439,11 +439,41 @@ a.text-pyb:hover, a.text-pyb:active, a.text-pyb:focus {
   background: rgba(0, 0, 0, 0.4);
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 -1px 1px rgba(255, 255, 255, 0.05);
 }
+.nav-tabs-pyb, .nav-justified.nav-tabs-pyb {
+  border-bottom:6px rgba(0,0,0,.7) solid;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.nav-tabs-pyb>li>a, .nav-justified.nav-tabs-pyb>li>a {
+  color: #777;
+  background: rgba(0,0,0,.7);
+  text-shadow: 0 1px 0 #000;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 0;
+  margin-bottom: 0;
+  padding: 10px;
+}
+.nav-tabs-pyb>li.active a, .nav-tabs-pyb>li.active>a:hover, .nav-tabs-pyb>li.active>a:active, .nav-tabs-pyb>li.active>a:focus,  
+.nav-tabs-pyb>li>a:hover, .nav-tabs-pyb>li>a:active, .nav-tabs-pyb>li>a:focus 
+.nav-justified.nav-tabs-pyb>li.active a, .nav-justified.nav-tabs-pyb>li.active>a:hover, .nav-justified.nav-tabs-pyb>li.active>a:active, .nav-justified.nav-tabs-pyb>li.active>a:focus,  
+.nav-justified.nav-tabs-pyb>li>a:hover, .nav-justified.nav-tabs-pyb>li>a:active, .nav-justified.nav-tabs-pyb>li>a:focus
+ {
+  border:1px solid transparent !important;
+  border-bottom: #bd8302 1px solid !important;
+  background: rgba(0,0,0,.8);
+  color: #f1f3fd;
+}
+.tab-content-pyb {
+  padding: 0 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08), 0 -1px 1px rgba(255, 255, 255, 0.05);
+}
 .btn-pyb {
   -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,1)), color-stop(10%, rgba(0,0,0,.8)), to(rgba(0,0,0,1)));
   white-space: normal;
 }
 fieldset>h2.text-pyb {
+    background: rgba(0,0,0,.7);
     box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.01), inset 0 -1px 0 #bd8302 !important;
 }
 .addon-pyb {
