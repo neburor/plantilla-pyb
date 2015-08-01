@@ -9,8 +9,8 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <link href="bootstrap-3.3.2-dist/css/bootstrap.min.css" rel="stylesheet"> 
-   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet"> 
+   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap core CSS 
    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css" rel="stylesheet">
    <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,700,400italic,700italic' rel='stylesheet' type='text/css'>-->
@@ -33,7 +33,11 @@
     <div class="navbar-header">
       <a class="navbar-brand navbarbrand-pyb" href="#"><img src="img/pyb_logo.png" alt="Pitbulls and Bullys"></a>
     </div>
-    <a href="" class="btn btn-default btn-pybtop pull-right"><i class="fa fa-info-circle"></i> Adopciones</a>
+    <ul class="nav navbar-nav pull-right">
+      <li><a href="" data-toggle="modal" data-target="#modal1"><i class="fa fa-map-signs"></i><span class="hidden-xxs">Explorar</span></a></li>
+      <li><a href="" data-toggle="modal" data-target="#modal2"><i class="fa fa-user-plus"></i><span class="hidden-xxs">Entrar</span> <span class="badge"><i class="fa fa-exclamation"></i></span></a></li>
+      <li><a href="" data-toggle="modal" data-target="#modal3"><i class="fa fa-comments"></i><span class="hidden-xxs">Mensajes</span> <span class="badge">2</span></a></li>
+    </ul>
   </div>
 </nav></div></div>
 
@@ -50,7 +54,7 @@
         </ul>
       </div>
       <div class="navbar-header pull-right">
-        <button type="button" class="navbar-toggle linkclick" data-toggle="offcanvas"><i class="fa fa-bars"></i><span class="sr-only">showmenu</span></button>   
+        <button type="button" class="navbar-toggle linkclick" data-toggle="offcanvas"><i class="fa fa-bars"></i><span class="sr-only">showmenu</span></button>  
         <form action="http://www.pdflibros.org/buscar/" id="cse-search-box" class="navbar-form form-top navbar-left" role="search">
           <input type="hidden" name="cx" value="partner-pub-3088837901615838:6074027469">
           <input type="hidden" name="cof" value="FORID:10">
@@ -64,6 +68,7 @@
             </div>
           </div>
         </form>
+
       </div>
     </div>
   </nav>
@@ -84,7 +89,7 @@
         <div class="carousel-caption">
           <h4 class="text-pyb">Adopta un Pitbull !!!</h4>
           <p>Dale el hogar y cariño que necesitan.</p>
-          <p><a class="btn btn-default btn-portada" href="#">Leer mas ... <i class="fa fa-chevron-right fx-2"></i></a></p>
+          <p><a class="btn btn-default btn-pybtop" href="#"><i class="fa fa-info-circle"></i> Adopciones <i class="fa fa-chevron-right fx-2"></i></a></p>
         </div>
       </div>
     </div>
@@ -233,9 +238,10 @@
       <div class="row">
       <div class="col-xs-12">
       <h2 class="text-pyb">Publicar un pitbull en adopcion</h2>
-      <form class="form" role="form">
-        <fieldset class="col-sm-8 col-xs-12 col-sm-offset-2 xxs-nopadding">
-          <h2 class="text-pyb">1. Datos de contacto</h2>
+      <div class="col-md-8 col-xs-12 col-md-offset-2 xxs-nopadding">
+      <form class="form wizard" role="form">
+        <fieldset>
+          <legend class="text-pyb">Datos de contacto</legend>
           <div class="form-group">
             <label for="nombre" class="control-label">Nombre :</label>
             <div class="input-group">
@@ -296,8 +302,8 @@
             </div>
           </fieldset>
         
-        <fieldset class="col-sm-8 col-xs-12 col-sm-offset-2 form-horizontal xxs-nopadding">
-          <h2 class="text-pyb">2. Información del perro</h2>
+        <fieldset>
+          <legend class="text-pyb">Información del perro</legend>
            <div class="form-group">
             <label for="calle" class="control-label">Sobre el perro :</label>
             <div class="input-group">
@@ -392,23 +398,23 @@
             </div>
           </div>
           </fieldset>
-             <fieldset class="col-sm-8 col-xs-12 col-sm-offset-2 xxs-nopadding">
-            <h2 class="text-pyb">3. Informacion sobre la adopcion</h2>
+             <fieldset>
+            <legend class="text-pyb">Informacion sobre la adopcion</legend>
            <div class="form-group">
             <label for="imagen" class="control-label">Requisitos para la adopcion:</label>
-              <textarea rows="8" class="form-control input-pyb" name="descripcion" placeholder="Describe todos los requisitos para adoptar este pitbull."></textarea>
+              <textarea rows="2" class="form-control input-pyb" name="descripcion" placeholder="Describe todos los requisitos para adoptar este pitbull."></textarea>
             </div>
              <div class="form-group">
             <label for="imagen" class="control-label">Puntos a conciderar:</label>
-              <textarea rows="8" class="form-control input-pyb" name="descripcion"placeholder="Describe todas las necesidades basicas y especiales que requiere este pitbull."></textarea>
+              <textarea rows="2" class="form-control input-pyb" name="descripcion"placeholder="Describe todas las necesidades basicas y especiales que requiere este pitbull."></textarea>
             </div>
              <div class="form-group">
             <label for="imagen" class="control-label">Proceso de adopcion:</label>
-              <textarea rows="8" class="form-control input-pyb" name="descripcion" placeholder="Describe el proceso de adopcion para este pitbull."></textarea>
+              <textarea rows="2" class="form-control input-pyb" name="descripcion" placeholder="Describe el proceso de adopcion para este pitbull."></textarea>
             </div>
         </fieldset>
-          <fieldset class="col-sm-8 col-xs-12 col-sm-offset-2 xxs-nopadding">
-            <h2 class="text-pyb">4. Detalles de la publicacion</h2>
+          <fieldset>
+            <legend class="text-pyb">Detalles de la publicacion</legend>
             <div class="form-group">
             <label for="imagen" class="control-label">Imagen para la publicacion :</label>
             <div class="input-group">
@@ -424,7 +430,7 @@
             </div>
           </div>
            <div class="form-group">
-              <textarea rows="8" class="form-control input-pyb" name="descripcion" placeholder="Ahora te invitamos a que escribas un texto de el por qué quieres darlo en adopción."></textarea>
+              <textarea rows="2" class="form-control input-pyb" name="descripcion" placeholder="Ahora te invitamos a que escribas un texto de el por qué deberian de adoptar a este pitbull."></textarea>
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-default btn-pyb">Enviar publicación <i class="fa fa-share"></i></button>
@@ -433,15 +439,17 @@
       </form>
       </div>
       </div>
+      </div>
     </div>
     <div role="tabpanel" class="tab-pane" id="messages">
       <div class="row">
       <div class="col-xs-12">
       <h2 class="text-pyb">Darse de alta como adoptante</h2>
       <p>La adopción es una responsabilidad que durara toda la vida del pitbull, que requiere de un trato digno y completo con comida, disciplina, ejercicio, y respeto. Si estas conciente del reto que conlleva te invitamos a llenar el siguiente formulario que nos ayudara a encontrar un integrante mas a tu familia. Despues te invitamos a leer toda la informacion de adopciones.</p>
-      <form class="form" role="form">
-        <fieldset class="col-sm-8 col-xs-12 col-sm-offset-2 xxs-nopadding">
-          <h2 class="text-pyb">Datos de contacto</h2>
+      <div class="col-sm-8 col-xs-12 col-sm-offset-2 xxs-nopadding">
+      <form class="form wizard" role="form">
+        <fieldset>
+          <legend class="text-pyb">Datos de contacto</legend>
           <div class="form-group">
             <label for="nombre" class="control-label">Nombre :</label>
             <div class="input-group">
@@ -501,9 +509,8 @@
               </select>
             </div>
           </fieldset>
-        
-        <fieldset class="col-sm-8 col-xs-12 col-sm-offset-2 form-horizontal xxs-nopadding">
-          <h2 class="text-pyb">Cuestionario de adoptante</h2>
+        <fieldset>
+          <legend class="text-pyb">Cuestionario de adoptante</legend>
           <div class="form-group">
             <label for="" class="col-md-9 col-xs-8 col-xxs-12 control-label">La familia esta de acuerdo con la adopción?</label>
             <div class="col-md-3 col-xs-4 col-xxs-12">
@@ -545,6 +552,7 @@
             </div>
         </fieldset>
       </form>
+      </div>
       </div>
       </div>
     </div>
@@ -736,27 +744,22 @@
       <!-- Formulario de contacto -->
       <div id="sendmail">
         <form class="form" role="form" tipo="contacto">
-          <div class="result"></div>
-          <div class="form-group col-xs-6 col-xxs-12">
-            <div class="input-group">
-                <span class="input-group-addon addon-pyb"><i class="fa fa-user"></i></span>
-                <input name="nombre" type="text" placeholder="Su nombre ..." class="form-control input-pyb"/>
-              </div>
-            </div>
-            <div class="form-group col-xs-6 col-xxs-12">
-              <div class="input-group">
-                <span class="input-group-addon addon-pyb"><i class="fa fa-at"></i></span>
-                <input name="correo" type="email" placeholder="Su correo ..." class="form-control input-pyb"/>
-              </div>
-          </div>
+          <div class="result"><div class="col-xs-12"><p><i class="fa fa-info-circle"></i> La respuesta a su mensaje la podra consultar posteriormente ingresando de nuevo a esta pagina.</p></div></div>
           <div class="form-group col-xs-12">
             <div class="input-group">
-              <span class="input-group-addon addon-pyb"><i class="fa fa-comments"></i></span>
+              <span class="input-group-addon addon-pyb"><i class="fa fa-comment"></i></span>
               <textarea name="mensaje" placeholder="Su mensaje a la administración ..." class="form-control input-pyb"></textarea>
             </div>
           </div>
+          <label class="checkbox-pyb col-xs-12"><input type="checkbox" name="opciones"><span>Notificarme a mi correo.</span></label>
+          <div class="collapse col-xs-12" aria-expanded="false" style="height: 0px;">
+            <div class="input-group">
+              <span class="input-group-addon addon-pyb"><i class="fa fa-user"></i></span>
+              <input type="email" name="correo" class="form-control input-pyb" placeholder="correo@ejemplo.com" disabled="disabled">
+            </div>
+          </div>
           <div class="form-group col-xs-12">
-            <button type="submit" class="btn btn-default btn-pyb btn-block">Enviar correo <i class="fa fa-share"></i></button>
+            <button type="submit" class="btn btn-default btn-pyb btn-block">Enviar mensaje <i class="fa fa-share"></i></button>
           </div>
         </form>
       </div>
@@ -802,14 +805,303 @@
 </footer>
 </div><!-- /.OFFCANVAS -->
 
+<!-- MODALS-->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content modal-content-pyb1">
+  <div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<div class="modal-title"><b><i class="fa fa-map-signs"></i> Descubre todo lo que puedes hacer</b></div>
+</div>
+<div class="modal-body">
+  <div class="container-fluid">
+<div class="row">
+<div class="col-xs-12">
+  <hr>
+  <blockquote class="blockquote-tuit">
+    <p><b>Ya somos una comunidad!</b> Interactúa con otros usuarios, contribuye mejorando la información y aporta contenido nuevo.</p>
+    <p>
+            <a href="" class="btn btn-default btn-link" title="Responder" target="_blank" rel="nofollow"><i class="fa fa-reply"></i></a>
+            <a href="" class="btn btn-default btn-link" title="Retweet" target="_blank" rel="nofollow"><i class="fa fa-retweet"></i></a>
+            <a href="" class="btn btn-default btn-link" title="Favoritos" target="_blank" rel="nofollow"><i class="fa fa-star"></i></a>
+            <a href="" class="btn btn-default btn-link pull-right" title="Seguir a @pitbullsandbull" target="_blank" rel="nofollow"><i class="fa fa-twitter"></i> Seguir</a>
+          </p>
+  </blockquote>
+  <hr>
+  <h4 class="text-pyb">Perfiles y Cuentas</h4>
+  <p>Ya se guardan todas tus actividades en un perfil automatico por dispositivo. Crea tu cuenta y podrás personalizar tu perfil asi como acceder a este desde otros dispositivos.</p>
+  <ul>
+    <li>Mandanos mensajes</li>
+    <li>Has comentarios en las publicaciones</li>
+    <li>Aporta nombres</li>
+    <li>Comparte imagenes</li>
+  </ul>
+  <hr>
+  <h4 class="text-pyb">Adopciones</h4>
+  <p>Consulta nuestra sección de adopciones, encuentra una mascota o permite a tu pitbull encuentre un hogar digno, tambien puedes ayudar a que encuentren hogar compartiendo.</p>
+  <ul>
+    <li>Busca pitbulls en adopcion</li>
+    <li>Publica tu pitbull en adopcion</li>
+    <li>Date de alta como adoptante</li>
+    <li>Ayuda a que los pitbulls encuentren un hogar</li>
+  </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal2" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content modal-content-pyb1">
+<div class="modal-body">
+<div class="row">
+<div class="col-xs-12">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <ul class="nav nav-tabs nav-tabs-pyb1" role="tablist">
+    <li role="presentation" class="active"><a href="#iniciar" aria-controls="iniciar" role="tab" data-toggle="tab"><i class="fa fa-sign-in"></i> <span class="hidden-xxs">Iniciar sesion</span></a></li>
+    <li role="presentation"><a href="#registrarse" aria-controls="registrarse" role="tab" data-toggle="tab"><i class="fa fa-edit"></i> <span class="hidden-xxs">Registrarse</span></a></li>
+  </ul>
+  <div class="tab-content tab-content-pyb1">
+    <div role="tabpanel" class="tab-pane active" id="iniciar">
+      <form class="form" role="form">
+      <div class="result"><div class="col-xs-12"><p><i class="fa fa-info-circle"></i> Inicie sesion para acceder a su perfil.</p></div></div>
+      <hr>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon addon-pyb"><i class="fa fa-at"></i></span>
+          <input name="correo" type="email" placeholder="correo@ejemplo.com" class="form-control input-pyb"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon addon-pyb"><i class="fa fa-lock"></i></span>
+          <input name="pass" type="password"placeholder="Contraseña" class="form-control input-pyb"/>
+        </div>
+      </div>
+      <label class="checkbox-pyb"><input type="checkbox" name="recordar"><span>Recordarme</span></label>
+      <button type="submit" class="btn btn-default btn-portada pull-right"><i class="fa fa-sign-in"></i> Conectarse</button>
+      </form>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="registrarse">
+      <form class="form" role="form">
+      <div class="result"><div class="col-xs-12"><p><i class="fa fa-info-circle"></i> Cree una cuenta <b>gratis</b>.</p></div></div>
+      <hr>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="fa fa-at"></i></span>
+          <input name="correo" type="email" placeholder="correo@ejemplo.com" class="form-control input-pyb"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="input-group">
+          <span class="input-group-addon addon-pdfl"><i class="fa fa-lock"></i></span>
+          <input type="password" name="pass" placeholder="Contraseña" class="form-control input-pyb">
+          <input type="password" name="repass" placeholder="Repetir" class="form-control input-pyb">
+        </div>
+      </div>
+        <label class="checkbox-pyb"><input type="checkbox" name="autopass"><span>Enviarme contraseña automatica.</span></label>
+        <button type="submit" class="btn btn-default btn-portada pull-right"><i class="fa fa-edit"></i> Registrarse</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="modal fade" id="modal3" tabindex="-1" role="dialog">
+<div class="modal-dialog" role="document">
+<div class="modal-content modal-content-pyb1">
+<div class="modal-body">
+<div class="row">
+<div class="col-xs-12">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <ul class="nav nav-tabs nav-tabs-pyb1" role="tablist">
+    <li role="presentation" class="active"><a href="#notificaciones" aria-controls="notificaciones" role="tab" data-toggle="tab"><span class="badge">2</span> <span class="hidden-xxs">Notificaciones</span></a></li>
+    <li role="presentation"><a href="#mensajes" aria-controls="mensajes" role="tab" data-toggle="tab"><i class="fa fa-comment"></i> <span class="hidden-xxs">Mensajes</span></a></li>
+    <li role="presentation"><a href="#comentarios" aria-controls="comentarios" role="tab" data-toggle="tab"><i class="fa fa-commenting"></i> <span class="hidden-xxs">Comentarios</span></a></li>
+  </ul>
+  <div class="tab-content tab-content-pyb1">
+    <div role="tabpanel" class="tab-pane active" id="notificaciones">
+    <div class="no-comments"><p>NINGUNA NOTIFICACION</p><i class="fa fa-bell"></i><p>Ahora puedes interactuar !</p></div>
+     <hr>
+    </div>
+    <div role="tabpanel" class="tab-pane" id="mensajes">
+     <div class="no-comments"><p>NINGUN MENSAJE</p><i class="fa fa-comment"></i><p>Envianos un mensaje !</p></div>
+     <hr>
+      <form class="form" role="form" tipo="contacto">
+          <div class="result"><div class="col-xs-12"><p><i class="fa fa-info-circle"></i> La respuesta a su mensaje la podra consultar posteriormente ingresando de nuevo a esta pagina.</p></div></div>
+          <div class="form-group col-xs-12">
+            <div class="input-group">
+              <span class="input-group-addon addon-pyb"><i class="fa fa-comment"></i></span>
+              <textarea name="mensaje" placeholder="Su mensaje a la administración ..." class="form-control input-pyb"></textarea>
+            </div>
+          </div>
+          <label class="checkbox-pyb col-xs-12"><input type="checkbox" name="opciones"><span>Notificarme a mi correo.</span></label>
+          <div class="collapse col-xs-12" aria-expanded="false" style="height: 0px;">
+            <div class="input-group">
+              <span class="input-group-addon addon-pyb"><i class="fa fa-user"></i></span>
+              <input type="email" name="correo" class="form-control input-pyb" placeholder="correo@ejemplo.com" disabled="disabled">
+            </div>
+          </div>
+          <div class="form-group col-xs-12">
+            <button type="submit" class="btn btn-default btn-pyb btn-block">Enviar mensaje <i class="fa fa-share"></i></button>
+          </div>
+        </form>
+        <hr>
+        <p class="text-left"><i class="fa fa-user icon"></i> <span class="date">6/07/15</span> <br>
+          Deseó adoptar una perita pitbull. soy de Guadalajara jal. mex.</p>
+        <p class="text-right last"><img src="img/favicon1.png" class="icon"> <span class="date">6/07/15</span> <br>
+          Hola, puedes <a href=""><i class="fa fa-search"></i> buscar</a> y completar el formulario de <a href=""><i class="fa fa-edit"></i> adoptantes</a> y en cuanto tengamos una coincidencia te lo notificaremos.</p>
+          <form class="form" role="form" tipo="contacto">
+          <div class="form-group col-xs-12">
+            <div class="input-group">
+              <input name="mensaje" placeholder="Su mensaje a la administración ..." class="form-control input-pyb"></input>
+              <div class="input-group-btn">
+              <button type="submit" class="btn btn-default btn-pyb"><i class="fa fa-share"></i></button>
+            </div>
+            </div>
+          </div>
+          <div class="result"><div class="col-xs-12"><p><i class="fa fa-info-circle"></i> La respuesta a su mensaje la podra consultar posteriormente ingresando de nuevo a esta pagina.</p></div></div>
+        </form>
+          <hr>
+          <form class="form" role="form" tipo="contacto">
+          <label class="checkbox-pyb col-xs-12"><input type="checkbox" name="opciones"><span>Notificarme a mi correo.</span></label>
+          <div class="collapse col-xs-12" aria-expanded="false" style="height: 0px;">
+            <div class="form-group">
+              <div class="result"></div>
+            <div class="input-group">
+              <span class="input-group-addon addon-pyb"><i class="fa fa-user"></i></span>
+              <input type="email" name="correo" class="form-control input-pyb" placeholder="correo@ejemplo.com" disabled="disabled">
+              <div class="input-group-btn">
+              <button type="submit" class="btn btn-default btn-pyb"><i class="fa fa-share"></i></button>
+            </div>
+            </div>
+            </div>
+          </div>
+        </form>
+  
+    </div>
+    <div role="tabpanel" class="tab-pane" id="comentarios">
+    <div class="no-comments"><p>NINGUN COMENTARIO</p><i class="fa fa-commenting"></i><p>Comente nuestros articulos !</p></div>
+    <hr>
+    <div class="comment">
+      <img src="imagenes/tipos-de-pitbull.jpg"><a href="">Tipos de pitbull</a>
+        <p><i class="fa fa-user icon"></i> <span class="date">6/07/15</span> Humm los Pitbull no son perros de pelea... Eran perros entrenados para cazar osos .. Domar toros y cazar animales grandes por eso son de una naturaleza se podría decir egocentrista .... Por que son animales que genéticamente están diseñados para dominar animales más fuertes.. Por eso cuando no se les da el entrenamiento apropiado y se les enseña normas de convivencia puede tonarse agresivo con otros perros... Tengamos en cuenta son animales , son perros hechos por el hombre para cuidar y trabajar a nuestro lado , y cuando llegan a la edad adulta sea cual sea la raza el quiere es protegernos.</p>
+        <ul class="nav nav-pills nav-justified nav-justified-movil">
+            <li><a href="#" data-toggle="collapse" data-target="#newreply-34" aria-expanded="false"><i class="fa fa-angle-down"></i> Expandir</a></li>
+            
+            <li><a href="#" data-toggle="collapse" data-target="#newreply-34" aria-expanded="false"><i class="fa fa-commenting-o"></i> Nuevos <span class="hidden-xs">comentarios</span> <span class="badge">2</span></a></li>
+        </ul>
+        
+        <div class="collapse replys" id="newreply-34">
+          <div class="row">
+            <div class="col-xs-12">
+              <button class="btn btn-link pull-right" data-toggle="collapse" data-target="#allreply-34" aria-expanded="false"><i class="fa fa-commenting"></i> Todos los comentarios <span class="badge">15</span></button>
+            </div>
+            <div class="container-fluid">
+              <div class="collapse" id="allreply-34">
+                <div class="row">
+                  <div class="container-fluid">
+                    <p class="text-right"><span class="user"><b>Anonimo 95</b></span> <span class="date">6/07/15</span><br>aportas buena informacion</p>
+                    <p class="text-left"><i class="fa fa-user icon"></i> <span class="date">6/07/15</span><br>gracias</p>
+                    <p class="text-right"><span class="user"><b>Anonimo 135</b></span> <span class="date">6/07/15</span><br>Muy buen comentario amigo</p>
+                  </div>
+                </div>
+              </div>
+              <p class="text-right last"><span class="user"><b>Anonimo 95</b></span> <span class="date">6/07/15</span><br>aportas buena informacion</p>
+              <p class="text-right last"><span class="user"><b>Anonimo 135</b></span> <span class="date">6/07/15</span><br>Muy buen comentario amigo</p>
+            </div>
+            <form class="form" role="form" tipo="contacto">
+              <div class="form-group col-xs-12">
+                <div class="input-group">
+                  <input name="mensaje" placeholder="Agregar comentario" class="form-control input-pyb"></input>
+                  <div class="input-group-btn">
+                    <button type="submit" class="btn btn-default btn-pyb"><i class="fa fa-share"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="result">
+                <div class="col-xs-12"><p><i class="fa fa-info-circle"></i> La respuesta a su mensaje la podra consultar posteriormente ingresando de nuevo a esta pagina.</p></div>
+              </div>
+            </form>
+          </div>
+        </div>
+    </div>
+
+     <!--
+        <ul class="breadcrumb breadcrumb_comm">
+          <li>Blog</li>
+          <li>Pitbull</li>
+          <li><a href="">Tipos de pitbull</a></li>
+          <li>16 <i class="fa fa-comment"></i></li>
+          <li>1048 <i class="fa fa-share-square-o"></i></li>
+        </ul>
+        <p class="text-left"><i class="fa fa-user icon"></i> <span class="date">6/07/15</span>
+          <span class="user"><b>Pitbullsoldiersbgta</b></span>
+          <span class="comment"><i class="fa fa-commnet"></i> #56</span>
+          <br>
+          Humm los Pitbull no son perros de pelea... Eran perros entrenados para cazar osos .. Domar toros y cazar animales grandes por eso son de una naturaleza se podría decir egocentrista .... Por que son animales que genéticamente están diseñados para dominar animales más fuertes.. Por eso cuando no se les da el entrenamiento apropiado y se les enseña normas de convivencia puede tonarse agresivo con otros perros... Tengamos en cuenta son animales , son perros hechos por el hombre para cuidar y trabajar a nuestro lado , y cuando llegan a la edad adulta sea cual sea la raza el quiere es protegernos.</p>
+          <p class="text-right"><i class="fa fa-user icon"></i> <span class="date">6/07/15</span>
+          <span class="user pull-right"><b>Anonimo 13</b></span><br>
+          Excelente !!</p>
+          <p class="text-right"><i class="fa fa-user icon"></i> <span class="date">6/07/15</span>
+          <span class="user pull-right"><b>Anonimo 95</b></span><br>
+          aportas buena informacion</p>
+        <p class="text-right last"><i class="fa fa-user icon"></i> <span class="date">6/07/15</span>
+          <span class="user pull-right"><b>Anonimo 135</b></span><br>
+          Muy buen comentario amigo</p>
+
+          <form class="form" role="form" tipo="contacto">
+          <div class="form-group col-xs-12">
+            <div class="input-group">
+              <input name="mensaje" placeholder="Responder comentario" class="form-control input-pyb"></input>
+              <div class="input-group-btn">
+              <button type="submit" class="btn btn-default btn-pyb"><i class="fa fa-share"></i></button>
+            </div>
+            </div>
+          </div>
+            <div class="result"><div class="col-xs-12"><p><i class="fa fa-info-circle"></i> La respuesta a su mensaje la podra consultar posteriormente ingresando de nuevo a esta pagina.</p></div></div>
+        </form>
+          <hr>
+          <form class="form" role="form" tipo="contacto">
+          <label class="checkbox-pyb col-xs-12"><input type="checkbox" name="opciones"><span>Notificarme a mi correo.</span></label>
+          <div class="collapse col-xs-12" aria-expanded="false" style="height: 0px;">
+            <div class="form-group">
+              <div class="result"></div>
+            <div class="input-group">
+              <span class="input-group-addon addon-pyb"><i class="fa fa-user"></i></span>
+              <input type="email" name="correo" class="form-control input-pyb" placeholder="correo@ejemplo.com" disabled="disabled">
+              <div class="input-group-btn">
+              <button type="submit" class="btn btn-default btn-pyb"><i class="fa fa-share"></i></button>
+            </div>
+            </div>
+            </div>
+          </div>
+        </form>
+      -->
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-   <script src="bootstrap-3.3.2-dist/js/jquery-1.11.2.min.js"></script>
-    <script src="bootstrap-3.3.2-dist/js/bootstrap.min.js"></script>
+   <script src="bootstrap-3.3.5-dist/js/jquery-1.11.3.min.js"></script>
+    <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
   <script type='text/javascript' src="js/custom.js"></script>
+  <script type='text/javascript' src="js/formularios.js"></script>
  <script type='text/javascript' src='wysihtml5/parser_rules/advanced.js'></script> 
 <script type='text/javascript' src='wysihtml5/dist/wysihtml5-0.3.0.min.js'></script>
   <script type="text/javascript">

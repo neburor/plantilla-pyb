@@ -7,8 +7,10 @@ $(function () {
 $(window).scroll(function () {
 if ($(this).scrollTop() > 100) {
 $('#back-top').fadeIn();
+$('.carousel-caption').fadeOut();
 } else {
 $('#back-top').fadeOut();
+$('.carousel-caption').fadeIn();
 }
 });
 
@@ -161,4 +163,92 @@ $(".btn-poll-show").on("click", function(){
     $(this).width(width+"%");
   });
 });
+
+//FUNCIONES
+$('.form').formularios();
+$('.wizard').each(function(i){
+  $(this).Wizard({idf:i});
+  $(this).find('a[href^="#"].animatescroll').Animatescroll();
 });
+});
+$.fn.Animatescroll= function(){
+    $(this).on('click',function (e) {
+        e.preventDefault();
+        var target = this.hash,
+        $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function () {
+            window.location.hash = target;
+        });
+    });
+}
+$.fn.Wizard = function(options) {
+        options = $.extend({  
+            submitButton: "",
+        }, options); 
+        
+        var element = this;
+
+        var steps = $(element).find("fieldset");
+        var count = steps.size();
+        var submmitButtonName = "#" + options.submitButton;
+        $(submmitButtonName).hide();
+
+        // 2
+        $(element).before("<ul id='wizardsteps"+options.idf+"' class='nav nav-tabs nav-justified nav-justified-movil nav-tabs-pyb wizardsteps'></ul>");
+
+        steps.each(function(i) {
+            $(this).wrap("<div id='"+options.idf+"step" + i + "'></div>");
+            $(this).append("<p id='"+options.idf+"step" + i + "commands'></p>");
+
+            // 2
+            var name = $(this).find("legend").html();
+            $("#wizardsteps"+options.idf+"").append("<li id='"+options.idf+"stepDesc" + i + "'><span class='hidden-xxs'>" + (i + 1) + " " + name + "</span></li>");
+
+            if (i == 0) {
+                createNextButton(i);
+                selectStep(i);
+            }
+            else if (i == count - 1) {
+                $("#"+options.idf+"step" + i).hide();
+                createPrevButton(i);
+            }
+            else {
+                $("#"+options.idf+"step" + i).hide();
+                createPrevButton(i);
+                createNextButton(i);
+            }
+        });
+
+        function createPrevButton(i) {
+            var stepName = ""+options.idf+"step" + i;
+            $("#" + stepName + "commands").append("<a href='#wizardsteps"+options.idf+"' id='" + stepName + "Prev' class='btn btn-default btn-portada prev animatescroll pull-left'><i class='fa fa-chevron-left'> Regresar</a>");
+
+            $("#" + stepName + "Prev").bind("click", function(e) {
+                $("#" + stepName).hide();
+                $("#"+options.idf+"step" + (i - 1)).show();
+                $(submmitButtonName).hide();
+                selectStep(i - 1);
+            });
+        }
+
+        function createNextButton(i) {
+            var stepName = ""+options.idf+"step" + i;
+            $("#" + stepName + "commands").append("<a href='#wizardsteps"+options.idf+"' id='" + stepName + "Next' class='btn btn-default btn-portada next animatescroll pull-right'>Siguiente <i class='fa fa-chevron-right'></i></a>");
+
+            $("#" + stepName + "Next").bind("click", function(e) {
+                $("#" + stepName).hide();
+                $("#"+options.idf+"step" + (i + 1)).show();
+                if (i + 2 == count)
+                    $(submmitButtonName).show();
+                selectStep(i + 1);
+            });
+        }
+
+        function selectStep(i) {
+            $("#wizardsteps"+options.idf+".wizardsteps li").removeClass("active");
+            $("#"+options.idf+"stepDesc" + i).addClass("active");
+        }
+
+    }
